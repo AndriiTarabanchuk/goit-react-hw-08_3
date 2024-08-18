@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Button from "../Button/Button";
 
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
-import { loginThunk } from "../../redux/auth/authOperations";
+import { loginThunk } from "../../redux/auth/operations";
 
 const LoginForm = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);

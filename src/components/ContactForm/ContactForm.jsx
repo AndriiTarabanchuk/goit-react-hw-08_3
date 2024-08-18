@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { nanoid } from "@reduxjs/toolkit";
 import Button from "../Button/Button";
-import { addContact } from "../../redux/contacts/contactsOps";
+import { addContact } from "../../redux/contacts/operations";
 
 function ContactForm() {
   const dispatch = useDispatch();
