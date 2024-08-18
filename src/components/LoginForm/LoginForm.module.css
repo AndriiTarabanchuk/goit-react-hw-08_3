@@ -13,8 +13,9 @@
   height: fit-content;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 3px 3px 3px 3px grey;
   font-size: 20px;
+  transition: 0.5 ease;
+  box-shadow: 3px 3px 3px 3px grey;
 }
 
 .formLogin {
@@ -30,7 +31,14 @@
   padding: 10px 8px;
   font-size: large;
   border: none;
-  box-shadow: 2px 2px 2px 2px grey;
   border-radius: 5px;
   background-color: inherit;
+  box-shadow: 2px 2px 2px 2px grey;
+  transition: 0.5 ease;
+  &:active {
+    box-shadow: 3px 3px 3px 3px grey;
+  }
+  &:hover {
+    box-shadow: 3px 3px 3px 3px grey;
+  }
 }
