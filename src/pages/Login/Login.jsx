@@ -23,7 +23,7 @@ const Login = () => {
     // options.resetForm();
   };
   if (isLoggedIn) {
-    return <Navigate to="/" />;
+    return <Navigate to="/tasks" />;
   }
   return (
     <div className={css.wrapLogin}>
