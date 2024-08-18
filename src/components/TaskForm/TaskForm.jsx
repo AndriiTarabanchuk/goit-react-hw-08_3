@@ -21,7 +21,9 @@ const TaskForm = () => {
         name="text"
         placeholder="Enter task text..."
       />
-      <Button type="submit">Add task</Button>
+      <Button type="submit" className={css.btnForm}>
+        Add task
+      </Button>
     </form>
   );
 };

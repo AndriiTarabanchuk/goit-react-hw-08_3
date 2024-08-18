@@ -4,23 +4,25 @@
   flex-wrap: wrap;
   gap: 10px;
   padding: 10px;
-  background-color: teal;
-  color: white;
+  /* background-color: teal; */
+  /* color: white; */
+  color: black;
+  background-color: white;
   align-items: center;
   margin-bottom: 20px;
   font-weight: bold;
+  border-bottom: 1px solid black;
 }
 .list {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
   gap: 10px;
   list-style-type: none;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-  li {
+  /* li {
     a {
       display: flex;
       align-items: center;
@@ -32,19 +34,19 @@
       font: inherit;
       font-weight: 700;
       cursor: pointer;
-      color: white;
       transition: 0.5s ease;
-      background-color: rgb(0, 128, 128);
+      background-color: inherit;
+      color: inherit;
       &:hover {
-        color: rgb(0, 128, 128);
+        color: black;
         background-color: white;
       }
       text-decoration: none;
-    }
-  }
+    } */
+  /* } */
 }
 
-.link {
+/* .link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,14 +56,15 @@
   font: inherit;
   font-weight: 700;
   cursor: pointer;
-  color: white;
   transition: 0.5s ease;
+  text-decoration: none;
   background-color: rgb(0, 128, 128);
+  color: white;
   &:hover {
     color: rgb(0, 128, 128);
     background-color: white;
   }
-}
+} */
 
 .item a {
   display: flex;
@@ -73,14 +76,13 @@
   font: inherit;
   font-weight: 700;
   cursor: pointer;
-  color: white;
   text-decoration: none;
-
   transition: 0.5s ease;
-  background-color: rgb(0, 128, 128);
+  background-color: inherit;
+  color: inherit;
   &:hover {
-    color: rgb(0, 128, 128);
-    background-color: white;
+    color: black;
+    background-color: lightgray;
   }
 }
 

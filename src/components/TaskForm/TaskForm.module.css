@@ -1,12 +1,15 @@
 .form {
   display: flex;
   gap: 4px;
+  margin-right: 5px;
 }
 
 .field {
   flex-grow: 1;
   padding: 8px;
   font: inherit;
+  border-radius: 5px;
+  margin-right: 5px;
 }
 
 .field:focus {
