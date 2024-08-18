@@ -1,3 +1,5 @@
+# npm i redux-persist
+
 # npm install react-hot-toast
 
 # npm i yup

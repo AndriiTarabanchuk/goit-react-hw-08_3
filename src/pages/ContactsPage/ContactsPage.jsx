@@ -8,6 +8,7 @@ import { Navigate } from "react-router";
 
 const ContactsPage = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
+
   return (
     <>
       {isLoggedIn ? (
