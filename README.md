@@ -1,3 +1,5 @@
+# npm install react-hot-toast
+
 # npm i yup
 
 # npm i formik

@@ -46,12 +46,20 @@ function ContactForm() {
         <Form className={css.form}>
           <label className={css.label}>
             <span>Name</span>
-            <Field className={css.input} name="name" />
+            <Field
+              className={css.input}
+              name="name"
+              placeholder="Enter name..."
+            />
             <ErrorMessage className={css.error} name="name" component="span" />
           </label>
           <label className={css.label}>
             <span>Number</span>
-            <Field className={css.input} name="number" />
+            <Field
+              className={css.input}
+              name="number"
+              placeholder="Enter number..."
+            />
             <ErrorMessage
               className={css.error}
               name="number"

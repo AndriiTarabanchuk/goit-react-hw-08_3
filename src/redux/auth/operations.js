@@ -38,14 +38,14 @@ export const logoutThunk = createAsyncThunk(
   }
 );
 
-export const getMeThunk = createAsyncThunk(
-  "auth/getMe",
-  async (_, thunkAPI) => {
-    try {
-      const { data } = await goitApi.get("users/current");
-      return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
+// export const getMeThunk = createAsyncThunk(
+//   "auth/getMe",
+//   async (_, thunkAPI) => {
+//     try {
+//       const { data } = await goitApi.get("users/current");
+//       return data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );

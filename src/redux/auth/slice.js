@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import { loginThunk, logoutThunk, registerThunk } from "./operations";
 
 const handlePending = (state) => {
-  state.auth.isRefreshing = true;
+  // state.auth.isRefreshing = true;
 };
 
 const handleRejected = (state, action) => {
-  state.auth.isRefreshing = false;
+  // state.auth.isRefreshing = false;
   state.auth.error = action.payload;
 };
 const initialState = {

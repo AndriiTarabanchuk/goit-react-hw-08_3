@@ -1,17 +1,17 @@
 import { Outlet } from "react-router";
 import css from "./Layout.module.css";
 import React from "react";
-import Header from "../Header/Header";
+import Navigation from "../Navigation/Navigation";
 import Main from "../Main/main";
 
 const Layout = () => {
   return (
     <div>
-      <Header />
+      <Navigation />
       <Main>
         <Outlet />
       </Main>
-      <footer className={css.footer}>AndriiTarbanchuk, &copy;2024</footer>
+      <footer className={css.footer}>AndriiTarbanchuk,2024 &copy;</footer>
     </div>
   );
 };

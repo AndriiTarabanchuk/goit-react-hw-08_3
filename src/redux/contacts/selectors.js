@@ -12,8 +12,10 @@ export const selectFilter = (state) => state.contacts.filter;
 export const selectFilteredContactsMemo = createSelector(
   [selectorContacts, selectStatusFilter],
   (contacts, filter) => {
-    return contacts.filter((contact) =>
-      contact.name.toLowerCase().includes(filter.toLowerCase())
+    return contacts.filter(
+      (contact) =>
+        contact.name.toLowerCase().includes(filter.toLowerCase()) ||
+        contact.number.includes(filter)
     );
   }
 );

@@ -15,6 +15,7 @@
   border-radius: 10px;
   box-shadow: 3px 3px 3px 3px grey;
   font-size: 20px;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
 }
 
 .formReg {

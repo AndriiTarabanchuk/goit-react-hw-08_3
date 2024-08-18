@@ -1,6 +1,6 @@
 .wrapItem {
   padding: 10px;
-  width: 280px;
+  width: 385px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,11 +20,16 @@
   gap: 10px;
 }
 .text {
-  max-width: 170px;
+  max-width: 250px;
   width: 100%;
   overflow-y: auto;
 }
 
 .textBtn {
   font-weight: 600;
+}
+
+.btnBox {
+  display: flex;
+  gap: 10px;
 }

@@ -10,7 +10,7 @@ const ContactSearch = () => {
   return (
     <div className={css.wrapSearch}>
       <label className={css.label}>
-        <span>Find by name</span>
+        <h3>Find by name and number</h3>
         <input
           className={css.input}
           type="text"
