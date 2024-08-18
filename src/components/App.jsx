@@ -6,6 +6,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import TasksBox from "./TasksBox/TasksBox";
+import { useSelector } from "react-redux";
+import { selectToken } from "../redux/auth/selectors";
 
 function App() {
   return (
