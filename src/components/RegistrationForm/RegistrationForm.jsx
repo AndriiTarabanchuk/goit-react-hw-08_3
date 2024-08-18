@@ -17,7 +17,6 @@ const RegistrationForm = () => {
     password: "",
   };
   const handleSubmit = (value, options) => {
-    console.log(value);
     dispatch(registerThunk(value));
     options.resetForm();
   };
@@ -26,7 +25,7 @@ const RegistrationForm = () => {
     return <Navigate to="/" />;
   }
   return (
-    <div className={css.wrapRegistr}>
+    <div className={css.wrapReg}>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className={css.formReg}>
           <Field

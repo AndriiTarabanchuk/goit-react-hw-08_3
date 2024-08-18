@@ -7,15 +7,21 @@ import ContactsPage from "../pages/ContactsPage/ContactsPage";
 import HomePage from "../pages/HomePage/HomePage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getMeThunk } from "../redux/auth/operations";
+import { PrivateRoute } from "../Routes/PrivateRoute";
+import { PublicRoute } from "../Routes/PublicRoute";
+import { selectIsRefreshing } from "../redux/auth/selectors";
 
 function App() {
   const dispatch = useDispatch();
+
+  // const isRefreshing = useSelector(selectIsRefreshing);
+
   useEffect(() => {
     dispatch(getMeThunk());
   }, [dispatch]);
-
+  // isRefreshing ? null :
   return (
     <>
       <div className={css.root}>
@@ -23,11 +29,33 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
-            <Route path="contacts" element={<ContactsPage />} />
+
+            <Route
+              path="contacts"
+              element={
+                <PrivateRoute>
+                  <ContactsPage />
+                </PrivateRoute>
+              }
+            />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
-          <Route path="login" element={<LoginPage />} />
-          <Route path="register" element={<RegistrationPage />} />
+          <Route
+            path="login"
+            element={
+              <PublicRoute>
+                <LoginPage />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="register"
+            element={
+              <PublicRoute>
+                <RegistrationPage />
+              </PublicRoute>
+            }
+          />
         </Routes>
       </div>
     </>
