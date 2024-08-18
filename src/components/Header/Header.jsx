@@ -20,7 +20,7 @@ const Header = () => {
       </div>
 
       <ul className={css.list}>
-        <li>
+        {/* <li>
           <NavLink to="/tasks">Tasks</NavLink>
         </li>
         <li>
@@ -31,8 +31,8 @@ const Header = () => {
         </li>
         <li>
           <Exit />
-        </li>
-        {/* {isLoggedIn && (
+        </li> */}
+        {isLoggedIn && (
           <>
             <li>
               <NavLink to="/tasks">Tasks</NavLink>
@@ -52,7 +52,7 @@ const Header = () => {
           <li>
             <Exit />
           </li>
-        )} */}
+        )}
       </ul>
     </header>
   );

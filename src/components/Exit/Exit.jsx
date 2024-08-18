@@ -9,7 +9,7 @@ const Exit = () => {
   return (
     <div>
       <button className={css.btnExit} onClick={() => dispatch(logoutThunk())}>
-        <p>Exit</p>
+        <p>Log out</p>
       </button>
     </div>
   );
