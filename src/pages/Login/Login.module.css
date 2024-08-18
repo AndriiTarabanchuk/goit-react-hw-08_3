@@ -1,0 +1,11 @@
+.wrapLogin {
+}
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.inputLogin {
+  max-width: 300px;
+}

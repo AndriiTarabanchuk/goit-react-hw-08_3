@@ -1,3 +1,9 @@
+# npm i formik
+
+# npm i react-router
+
+# npm i react-router-dom
+
 # npm i clsx
 
 # npm i react-icons

@@ -1,0 +1,12 @@
+.formReg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.inputReg {
+  max-width: 300px;
+}
+.btnReg {
+  width: 150px;
+}
