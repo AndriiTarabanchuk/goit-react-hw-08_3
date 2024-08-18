@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import css from "./Header.module.css";
+import css from "./Navigation.module.css";
 import { useSelector } from "react-redux";
 import Logout from "../Logout/Logout";
 import { selectUser, selectIsLoggedIn } from "../../redux/auth/selectors";
 
-const Header = () => {
+const Navigation = () => {
   const user = useSelector(selectUser);
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
@@ -13,7 +13,6 @@ const Header = () => {
       <div className={css.item}>
         <NavLink to="/">Home</NavLink>
       </div>
-
       {isLoggedIn && (
         <>
           <div className={css.item}>
@@ -45,4 +44,4 @@ const Header = () => {
     </header>
   );
 };
-export default Header;
+export default Navigation;
