@@ -4,9 +4,9 @@ import Contact from "../Contact/Contact";
 import { selectFilteredContactsMemo } from "../../redux/contacts/selectors";
 import { fetchContacts } from "../../redux/contacts/contactsOps";
 import { useEffect } from "react";
+
 const ContactList = () => {
   const dispatch = useDispatch();
-  const listData = useSelector(fetchContacts);
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
@@ -19,6 +19,7 @@ const ContactList = () => {
   const filteredData = useSelector(selectFilteredContactsMemo);
   return (
     <div className={css.wrap}>
+
       <ul className={css.contList}>
         {filteredData.map((contact) => {
           return (
