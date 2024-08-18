@@ -11,18 +11,18 @@ const ContactsPage = () => {
 
   return (
     <>
-      {isLoggedIn ? (
-        <>
-          <h2 className={css.title}>Contacts page</h2>
-          <ContactForm />
-          <ContactSearch />
-          <ContactList />
-        </>
+      <>
+        <h2 className={css.title}>Contacts page</h2>
+        <ContactForm />
+        <ContactSearch />
+        <ContactList />
+      </>
+      {/* {isLoggedIn ? (
       ) : (
         <>
           <Navigate to="/" />
         </>
-      )}
+      )} */}
     </>
   );
 };

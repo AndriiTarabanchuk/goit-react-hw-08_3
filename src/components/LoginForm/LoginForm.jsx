@@ -1,7 +1,7 @@
 import css from "./LoginForm.module.css";
 import { Field, Formik, Form } from "formik";
 import React from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "../Button/Button";
 
@@ -10,7 +10,7 @@ import { loginThunk } from "../../redux/auth/operations";
 
 const LoginForm = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-
+  const location = useLocation();
   const dispatch = useDispatch();
   const initialValues = {
     email: "",
@@ -21,6 +21,7 @@ const LoginForm = () => {
     dispatch(loginThunk(value));
     options.resetForm();
   };
+
   if (isLoggedIn) {
     return <Navigate to="/" />;
   }

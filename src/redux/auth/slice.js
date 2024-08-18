@@ -7,12 +7,11 @@ import {
 } from "./operations";
 
 const handlePending = (state) => {
-  // state.auth.isRefreshing = true;
+  state.isRefreshing = true;
 };
 
 const handleRejected = (state, action) => {
-  // state.auth.isRefreshing = false;
-  state.auth.error = action.payload;
+  state.isRefreshing = false;
 };
 const initialState = {
   user: {
@@ -38,17 +37,19 @@ const slice = createSlice({
         state.token = action.payload.token;
         state.isLoggedIn = true;
       })
+      .addCase(logoutThunk.fulfilled, (state, action) => {
+        return initialState;
+      })
       .addCase(getMeThunk.fulfilled, (state, action) => {
         state.isLoggedIn = true;
         state.user.user = action.payload.user;
         state.user.email = action.payload.email;
-      })
-      .addCase(logoutThunk.fulfilled, (state, action) => {
-        return initialState;
+        state.isRefreshing = false;
       })
       .addCase(registerThunk.pending, handlePending)
       .addCase(loginThunk.pending, handlePending)
-      .addCase(logoutThunk.pending, handlePending);
+      .addCase(logoutThunk.pending, handlePending)
+      .addCase(getMeThunk.pending, handlePending);
   },
 });
 export const authReducer = slice.reducer;
