@@ -3,14 +3,14 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import ContactList from "../../components/ContactList/ContactList";
 import ContactSearch from "../../components/ContactSearch/ContactSearch";
 import css from "./ContactsPage.module.css";
-import { selectIsRefreshing } from "../../redux/auth/selectors";
+import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import { Navigate } from "react-router";
 
 const ContactsPage = () => {
-  const isRefreshing = useSelector(selectIsRefreshing);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <>
-      {isRefreshing ? (
+      {isLoggedIn ? (
         <>
           <ContactForm />
           <ContactSearch />
