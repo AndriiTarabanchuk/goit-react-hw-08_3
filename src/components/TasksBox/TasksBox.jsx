@@ -11,6 +11,8 @@ import { useDispatch, useSelector } from "react-redux";
 import AppBar from "../AppBar/AppBar";
 import TaskForm from "../TaskForm/TaskForm";
 import TaskList from "../TaskList/TaskList";
+import { selectIsLoggedIn } from "../../redux/auth/selectors";
+import { Navigate } from "react-router";
 
 const TasksBox = () => {
   const dispatch = useDispatch();
@@ -19,12 +21,21 @@ const TasksBox = () => {
   useEffect(() => {
     dispatch(fetchTasks());
   }, [dispatch]);
+
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
   return (
     <div>
-      <AppBar />
-      <TaskForm />
-      {isLoading && !error && <b>Request in progress...</b>}
-      <TaskList />
+      {isLoggedIn ? (
+        <>
+          <AppBar />
+          <TaskForm />
+          {isLoading && !error && <b>Request in progress...</b>}
+          <TaskList />
+        </>
+      ) : (
+        <Navigate to="/" />
+      )}
     </div>
   );
 };
