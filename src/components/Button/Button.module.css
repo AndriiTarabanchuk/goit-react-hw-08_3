@@ -10,6 +10,7 @@
   background-color: #e2e5e8;
   color: inherit;
   box-shadow: 2px 2px 2px 2px grey;
+  transition: 500ms ease;
 }
 
 .btn.isSelected {
