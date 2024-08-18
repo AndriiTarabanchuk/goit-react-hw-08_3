@@ -1,3 +1,5 @@
+# npm i yup
+
 # npm i formik
 
 # npm i react-router

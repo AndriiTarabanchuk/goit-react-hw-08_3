@@ -13,20 +13,18 @@ const Header = () => {
       <div className={css.item}>
         <NavLink to="/">Home</NavLink>
       </div>
+
       {isLoggedIn && (
-        // <div className={css.item}>
-        //   <NavLink to="/tasks">Tasks</NavLink>
-        // </div>
-        <div className={css.item}>
-          <NavLink to="/contacts">Contacts</NavLink>
-        </div>
-      )}
-      {isLoggedIn && (
-        <div className={css.name}>
-          <p>
-            Welcome, <span>{user.email}</span>
-          </p>
-        </div>
+        <>
+          <div className={css.item}>
+            <NavLink to="/contacts">Contacts</NavLink>
+          </div>
+          <div className={css.name}>
+            <p>
+              Welcome, <span>{user.email}</span>
+            </p>
+          </div>
+        </>
       )}
       <ul className={css.list}>
         {!isLoggedIn ? (

@@ -1,0 +1,30 @@
+.wrapItem {
+  padding: 10px;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.text {
+  max-width: 170px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.textBtn {
+  font-weight: 600;
+}

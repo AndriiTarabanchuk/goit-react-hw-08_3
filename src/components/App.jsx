@@ -1,14 +1,12 @@
 import css from "./App.module.css";
 import { Route, Routes } from "react-router";
 import Layout from "./Layout/Layout";
-import Home from "../pages/Home/Home";
-import Login from "../pages/Login/Login";
-import Register from "../pages/Register/Register";
+import RegistrationPage from "../pages/RegistrationPage/RegistrationPage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
-import { useSelector } from "react-redux";
-import { selectToken } from "../redux/auth/selectors";
-import TasksBox from "./toTask/TasksBox/TasksBox";
-import ContactsBox from "./ContactsBox/ContactsBox";
+import ContactsPage from "../pages/ContactsPage/ContactsPage";
+// import TasksPage from "../pages/TasksPage/TasksPage";
+import HomePage from "../pages/HomePage/HomePage";
+import LoginPage from "../pages/LoginPage/LoginPage";
 
 function App() {
   return (
@@ -17,13 +15,13 @@ function App() {
         <h1 className={css.visualliHidden}>Book of contacts</h1>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            {/* <Route path="tasks" element={<TasksBox />} /> */}
-            <Route path="contacts" element={<ContactsBox />} />
+            <Route index element={<HomePage />} />
+            {/* <Route path="tasks" element={<TasksPage />} /> */}
+            <Route path="contacts" element={<ContactsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="register" element={<RegistrationPage />} />
         </Routes>
       </div>
     </>
