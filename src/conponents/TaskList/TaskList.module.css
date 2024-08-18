@@ -1,0 +1,10 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listItem:nth-child(1n) {
+  border-bottom: 1px solid #2f2f37;
+  padding: 5px;
+}
