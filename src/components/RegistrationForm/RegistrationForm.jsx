@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 import Button from "../Button/Button";
 
-import { registerThunk } from "../../redux/auth/authOperations";
+import { registerThunk } from "../../redux/auth/operations";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 
 const RegistrationForm = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import css from "./Logout.module.css";
-import { logoutThunk } from "../../redux/auth/authOperations";
+import { logoutThunk } from "../../redux/auth/operations";
 import { useDispatch } from "react-redux";
 useDispatch;
 const Logout = () => {

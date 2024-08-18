@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import css from "./ContactList.module.css";
 import Contact from "../Contact/Contact";
 import { selectFilteredContactsMemo } from "../../redux/contacts/selectors";
-import { fetchContacts } from "../../redux/contacts/contactsOps";
+import { fetchContacts } from "../../redux/contacts/operations";
 import { useEffect } from "react";
 
 const ContactList = () => {
@@ -19,7 +19,6 @@ const ContactList = () => {
   const filteredData = useSelector(selectFilteredContactsMemo);
   return (
     <div className={css.wrap}>
-
       <ul className={css.contList}>
         {filteredData.map((contact) => {
           return (
