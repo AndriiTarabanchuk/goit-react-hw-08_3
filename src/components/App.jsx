@@ -5,9 +5,11 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
-import TasksBox from "./TasksBox/TasksBox";
 import { useSelector } from "react-redux";
 import { selectToken } from "../redux/auth/selectors";
+import TasksBox from "./toTask/TasksBox/TasksBox";
+import ContactsBox from "./ContactsBox/ContactsBox";
+
 function App() {
   return (
     <>
@@ -16,7 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="tasks" element={<TasksBox />} />
+            {/* <Route path="tasks" element={<TasksBox />} /> */}
+            <Route path="contacts" element={<ContactsBox />} />
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

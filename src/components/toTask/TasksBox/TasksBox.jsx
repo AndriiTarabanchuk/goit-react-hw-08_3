@@ -5,15 +5,16 @@ import {
   selectError,
   selectIsLoading,
   selectTasks,
-} from "../../redux/tasks/selectors";
-import { fetchTasks } from "../../redux/tasks/operations";
+} from "../../../redux/tasks/selectors";
+import { fetchTasks } from "../../../redux/tasks/operations";
 import { useDispatch, useSelector } from "react-redux";
 import TaskForm from "../TaskForm/TaskForm";
 import TaskList from "../TaskList/TaskList";
-import { selectIsLoggedIn } from "../../redux/auth/selectors";
-import { Navigate } from "react-router";
 import AppBar from "../AppBar/AppBar";
+import { Navigate } from "react-router";
+import { selectIsLoggedIn } from "../../../redux/auth/selectors";
 
+selectIsLoggedIn;
 const TasksBox = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
@@ -30,6 +31,7 @@ const TasksBox = () => {
         <>
           {/* <AppBar /> */}
           <TaskForm />
+
           {isLoading && !error && <b>Request in progress...</b>}
           <TaskList />
         </>
