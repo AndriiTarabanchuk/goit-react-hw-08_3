@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import css from "./Header.module.css";
 import { useSelector } from "react-redux";
-import Exit from "../Exit/Exit";
+import Logout from "../Logout/Logout";
 import { selectUser, selectIsLoggedIn } from "../../redux/auth/selectors";
 
 const Header = () => {
@@ -28,16 +28,16 @@ const Header = () => {
       <ul className={css.list}>
         {!isLoggedIn ? (
           <>
-            <li>
+            <li className={css.item}>
               <NavLink to="/register">Register</NavLink>
             </li>
-            <li>
+            <li className={css.item}>
               <NavLink to="/login">Log In</NavLink>
             </li>
           </>
         ) : (
           <li>
-            <Exit />
+            <Logout />
           </li>
         )}
       </ul>

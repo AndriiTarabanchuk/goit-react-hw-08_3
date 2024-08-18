@@ -8,7 +8,6 @@ import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import TasksBox from "./TasksBox/TasksBox";
 import { useSelector } from "react-redux";
 import { selectToken } from "../redux/auth/selectors";
-
 function App() {
   return (
     <>
