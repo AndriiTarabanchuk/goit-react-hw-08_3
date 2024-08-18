@@ -1,0 +1,19 @@
+.wrapSearch {
+  padding: 10px;
+  max-width: 280px;
+  width: 100%;
+  font-size: inherit;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: inherit;
+}
+.input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px 10px;
+  max-width: inherit;
+  font-size: inherit;
+}
