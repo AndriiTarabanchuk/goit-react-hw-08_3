@@ -3,8 +3,8 @@ import css from "./Task.module.css";
 import { useDispatch } from "react-redux";
 import { MdClose, MdEdit } from "react-icons/md";
 
-import { deleteTask, toggleCompleted } from "../../redux/tasks/operations";
-import Button from "../Button/Button";
+import { deleteTask, toggleCompleted } from "../../../redux/tasks/operations";
+import Button from "../../Button/Button";
 
 export const Task = ({ task }) => {
   const dispatch = useDispatch();

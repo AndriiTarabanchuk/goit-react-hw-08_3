@@ -18,12 +18,11 @@ const Login = () => {
   };
 
   const handleSubmit = (value, options) => {
-    console.log(value);
     dispatch(loginThunk(value));
-    // options.resetForm();
+    options.resetForm();
   };
   if (isLoggedIn) {
-    return <Navigate to="/tasks" />;
+    return <Navigate to="/contacts" />;
   }
   return (
     <div className={css.wrapLogin}>

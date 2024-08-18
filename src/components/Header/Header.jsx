@@ -14,8 +14,11 @@ const Header = () => {
         <NavLink to="/">Home</NavLink>
       </div>
       {isLoggedIn && (
+        // <div className={css.item}>
+        //   <NavLink to="/tasks">Tasks</NavLink>
+        // </div>
         <div className={css.item}>
-          <NavLink to="/tasks">Tasks</NavLink>
+          <NavLink to="/contacts">Contacts</NavLink>
         </div>
       )}
       {isLoggedIn && (
